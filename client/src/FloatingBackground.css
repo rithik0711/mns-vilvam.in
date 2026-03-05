@@ -1,0 +1,55 @@
+.animated-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 110vw;
+  height: 110vh;
+  z-index: -1;
+  overflow: hidden;
+  transition: transform 0.2s ease-out;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.5;
+  mix-blend-mode: multiply;
+  animation: float 10s ease-in-out infinite alternate;
+}
+
+.orb1 {
+  width: 500px;
+  height: 500px;
+  background: #ffd580;
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.orb2 {
+  width: 400px;
+  height: 400px;
+  background: #ffb347;
+  bottom: 15%;
+  right: 15%;
+  animation-delay: 2s;
+}
+
+.orb3 {
+  width: 450px;
+  height: 450px;
+  background: #ffeaa7;
+  top: 50%;
+  left: 60%;
+  animation-delay: 4s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) scale(1);
+  }
+  100% {
+    transform: translateY(-30px) scale(1.05);
+  }
+}
